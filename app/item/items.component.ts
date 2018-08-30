@@ -12,7 +12,7 @@ export class ItemsComponent implements OnInit {
     items: Item[];
 
     receivedPacket: string;
-    packetToSend: string;
+    packetToSend: string = "";
 
 
     // This pattern makes use of Angular’s dependency injection implementation to inject an instance of the ItemService service into this class. 
@@ -33,6 +33,14 @@ export class ItemsComponent implements OnInit {
 
         console.log("+++ sendPacketToSerial - packetToSend " + this.packetToSend);
 
-        
+        this.receivedPacket = "prova";
+    }
+
+    cleanReceivedPacketVar() {
+        this.receivedPacket = "vuoto";
+    }
+
+    cleanPacketToSendVar() {
+        this.packetToSend = "";
     }
 }
