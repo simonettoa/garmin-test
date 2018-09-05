@@ -25,30 +25,32 @@ class names available for styling your app at https://docs.nativescript.org/ui/t
 -->
 <StackLayout class="page">
     <StackLayout class="m-15">
-        <Label text="Ricezione pacchetti:"></Label>
+        <Label text="Receive data:"></Label>
         <Label textWrap="true" [text]="receivedPacket" color="black"></Label>
 
         <Label text=" " color="white"></Label>
-        <Button text="Pulisci ricezione" (tap)="cleanReceivedPacketVar()"></Button>
+        <Button text="Clean reception" (tap)="cleanReceivedPacketVar()"></Button>
         <Label text=" " color="white"></Label>
         <Label text=" " color="white"></Label>
 
 
-        <Label text="Testo da inviare:"></Label>
+        <Label text="Text to send:"></Label>
         <TextField
-            hint="Inserisci testo qui"
+            hint="Insert text here"
             [(ngModel)]="packetToSend"
             color="black"
             autocorrect="false"
             autocapitalizationType="none"
         ></TextField>
 
-        <Button text="Invia pacchetto" (tap)="sendPacketToSerial()"></Button>
+        <Button text="Send packet" (tap)="sendPacketToSerial()"></Button>
 
         <Label text=" " color="white"></Label>
-        <Button text="Pulisci invio" (tap)="cleanPacketToSendVar()"></Button>
+        <Button text="Clean send" (tap)="cleanPacketToSendVar()"></Button>
         <Label text=" " color="white"></Label>
 
+
+        <Button text="test Garmin class" (tap)="testGarmin()"></Button>
 
     </StackLayout>
     

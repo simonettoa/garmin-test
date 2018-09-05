@@ -3,6 +3,8 @@ import { Component, OnInit } from "@angular/core";
 import { Item } from "./item";
 import { ItemService } from "./item.service";
 
+declare var com: any;
+
 @Component({
     selector: "ns-items",
     moduleId: module.id,
@@ -27,7 +29,6 @@ export class ItemsComponent implements OnInit {
     }
 
 
-
     sendPacketToSerial() {
         console.log("+++ sendPacketToSerial...");
 
@@ -42,5 +43,20 @@ export class ItemsComponent implements OnInit {
 
     cleanPacketToSendVar() {
         this.packetToSend = "";
+    }
+
+    testGarmin() {
+        console.log("+++ testGarmin...");
+        
+        // let serial = new com.garmin.android.comm.SerialPort();
+        // ERROR TypeError: Cannot read property 'android' of undefined
+
+
+        // let test = new com.garmin.dashcam.VideoProperties("aa", 1, 1, 1);
+        // ERROR TypeError: Cannot read property 'dashcam' of undefined
+
+        
+
+        console.log("+++ END - testGarmin!");
     }
 }

@@ -24,7 +24,8 @@
 		"reflect-metadata": "~0.1.8",
 		"rxjs": "~6.1.0",
 		"tns-core-modules": "~4.1.0",
-		"zone.js": "^0.8.26"
+		"zone.js": "^0.8.26",
+		"tns-platform-declarations": "~4.1.0"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.26.0",
