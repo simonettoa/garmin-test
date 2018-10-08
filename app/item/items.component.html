@@ -24,36 +24,43 @@ core theme, such as p-20, btn, h2, and list-group. You can view a full list of t
 class names available for styling your app at https://docs.nativescript.org/ui/theme.
 -->
 <StackLayout class="page">
-    <StackLayout class="m-15">
-        <Label text="Receive data:"></Label>
-        <Label textWrap="true" [text]="receivedPacket" color="black"></Label>
+    <ScrollView>
+        <StackLayout class="m-15">
 
-        <Label text=" " color="white"></Label>
-        <Button text="Clean reception" (tap)="cleanReceivedPacketVar()"></Button>
-        <Label text=" " color="white"></Label>
-        <Label text=" " color="white"></Label>
+            <Button text="reset data" (tap)="resetData"></Button>
+            <Button text="test Garmin class" (tap)="testGarmin()"></Button>
 
-
-        <Label text="Text to send:"></Label>
-        <TextField
-            hint="Insert text here"
-            [(ngModel)]="packetToSend"
-            color="black"
-            autocorrect="false"
-            autocapitalizationType="none"
-        ></TextField>
-
-        <Button text="Send packet" (tap)="sendPacketToSerial()"></Button>
-
-        <Label text=" " color="white"></Label>
-        <Button text="Clean send" (tap)="cleanPacketToSendVar()"></Button>
-        <Label text=" " color="white"></Label>
+            <Button text="Upd status serial" (tap)="updStatusSerialPort()"></Button>
+            <Label text=" " color="white"></Label>
 
 
-        <Button text="test Garmin class" (tap)="testGarmin()"></Button>
+            <Label text="Receive data:"></Label>
+            <Label textWrap="true" [text]="receivedPacket" color="black"></Label>
 
-    </StackLayout>
-    
+            <Label text=" " color="white"></Label>
+            <Button text="Clean reception" (tap)="cleanReceivedPacketVar()"></Button>
+            <Label text=" " color="white"></Label>
+            <Label text=" " color="white"></Label>
+
+
+            <Label text="Text to send:"></Label>
+            <TextField
+                hint="Insert text here"
+                [(ngModel)]="packetToSend"
+                color="black"
+                autocorrect="false"
+                autocapitalizationType="none"
+            ></TextField>
+
+            <Button text="Send packet" (tap)="sendPacketToSerial()"></Button>
+
+            <Label text=" " color="white"></Label>
+            <Button text="Clean send" (tap)="cleanPacketToSendVar()"></Button>
+            <Label text=" " color="white"></Label>
+
+            
+        </StackLayout>
+    </ScrollView>
 </StackLayout>
 
 
